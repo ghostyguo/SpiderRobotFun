@@ -3,6 +3,7 @@
 Servo servo[12]; 
 int servoPin[12]={2,3,4,5,6,7,8,9,A0,A1,A2,A3};
 
+#define Steps 8
 int spiderMove[]  = { 
          200, 150,  90,    60,  90,    90,  90,   150,  90,    60,  90,    90,  90, //put leg set 2 
          200, 150,  90,    60,  45,    90,  90,   150, 135,    60,  90,    90, 135, //lift leg set 1
@@ -21,7 +22,7 @@ void setup() {
 }
 
 void loop() {
-    for (int cmd=0; cmd<8; cmd++) {
+    for (int cmd=0; cmd<Steps; cmd++) {
         Serial.print("Command");
         Serial.print(cmd);
         Serial.print(":");

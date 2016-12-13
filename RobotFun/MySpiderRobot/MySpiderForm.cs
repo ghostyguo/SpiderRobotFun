@@ -550,6 +550,7 @@ namespace MySpiderRobot
             {
                 StreamWriter outfile = new StreamWriter(dialog.FileName, false, System.Text.Encoding.Default);
 
+                outfile.WriteLine("#define Steps" + commandTable.Rows.Count);
                 outfile.WriteLine("int spiderMove[]  = {");
                 string data;
                 for (int row = 0; row < commandTable.Rows.Count; row++ )
